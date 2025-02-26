@@ -1,4 +1,4 @@
-from flask import Flask,render_template,redirect
+from flask import Flask, render_template,redirect
 import cv2
 import numpy as np
 import dlib
@@ -7,8 +7,6 @@ import time
 import asyncio
 import webbrowser
 from pygame import mixer
-
-
 
 app = Flask(__name__)
 mixer.init()
