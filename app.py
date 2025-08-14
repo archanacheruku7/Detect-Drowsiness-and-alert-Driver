@@ -10,6 +10,8 @@ from pygame import mixer
 
 app = Flask(__name__)
 mixer.init()
+import os
+print(os.getcwd())
 no_driver_sound = mixer.Sound('No_driver.mp3')
 sleep_sound = mixer.Sound('sleep_sound.wav')
 tired_sound = mixer.Sound('rest_audio.mp3')
@@ -84,7 +86,7 @@ def detect_liquor(self):
         return "Liquor Detected"
     else:
         return "No Liquor Detected"
-
+    
 def detech():
     # input("Press Enter to measure alcohol level...")
     # result = detector.detect_liquor()
@@ -111,7 +113,7 @@ def detech():
     st_time=time.time()
     no_driver_time=time.time()
     no_driver_sound_start = time.time()
-    max_driving_time=2*60
+    max_driving_time=1*60
 
     while True:
         _, frame = cap.read()
